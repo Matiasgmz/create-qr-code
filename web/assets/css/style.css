@@ -1,0 +1,23 @@
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Assurez-vous que le conteneur est derrière le contenu */
+}
+
+@font-face {
+	font-family: 'Generic Techno';
+	src: url('../font/GenericTechno.otf'),
+}
+
+body {
+  background-color: #f1f3f4;
+  font-family: 'Generic Techno';
+}
+
+#sectionInput {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+}
