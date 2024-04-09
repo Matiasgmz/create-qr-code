@@ -1,10 +1,10 @@
-
 var inputUrl = document.getElementById("inputUrl");
 var buttonGenQR = document.getElementById("genQR");
 const sectionDownload = document.getElementById("sectionDownload");
 
 function generateQrCode() {
   // Clear the contents of the #qrcode div
+
   document.getElementById("qrcode").innerHTML = "";
 
   var qrcode = new QRCode(document.getElementById("qrcode"), {
@@ -14,6 +14,7 @@ function generateQrCode() {
     colorDark: "#000000",
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H,
+    border: 4
   });
 
   (async function () {
@@ -24,12 +25,18 @@ function generateQrCode() {
     const qrcodeImg = document.querySelector("#qrcode img");
     const qrcodeImgSrc = qrcodeImg.src;
     sectionDownload.innerHTML =
-      '<a class="text-decoration-none text-dark fs-4" href="' +
+      '<a class="text-decoration-none text-light fs-5 btn btn-dark " href="' +
       qrcodeImgSrc +
       '" download="qrcode.png"><i class="fa-solid fa-download fa-beat"></i><br>Telecharger</a>';
   })();
+
 }
 
 inputUrl.addEventListener("keyup", function (e) {
-  generateQrCode();
+  if (inputUrl.value.length > 0) {
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
 });
