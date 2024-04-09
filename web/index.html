@@ -3,7 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Créateur de QR Code</title>
+    <title>Générateur de QR code</title>
+    <meta
+      name="description"
+      content="Générez facilement des QR codes pour vos liens, textes, adresses email et plus encore. Créez des QR codes uniques avec des options de personnalisation avancées. Essayez notre outil gratuit !"
+    />
+    <meta
+      name="keywords"
+      content="QR code, générateur QR code, personnalisation QR code, lien QR code, texte QR code, adresse email QR code, outil gratuit"
+    />
+    <meta name="author" content="Matias GOMEZ" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Générateur de QR code" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="URL de votre page"> -->
+    <!-- <meta property="og:image" content="URL de l'image à utiliser lorsque votre contenu est partagé"> -->
+    <meta
+      property="og:description"
+      content="Générez facilement des QR codes pour vos liens, textes, adresses email et plus encore. Créez des QR codes uniques avec des options de personnalisation avancées. Essayez notre outil gratuit !"
+    />
+
+    <link rel="apple-touch-icon" href="assets/img/qrcode.png" />
+    <link rel="Icon" type="image/png" href="assets/img/qrcode.png" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -32,7 +55,7 @@
           <h1 class="mt-3 fs-4 text-center">Generateur QR Code</h1>
 
           <div class="mt-5">
-            <label for="url" class="form-label fs-6">Entrez l'URL</label>
+            <label for="url" class="form-label fs-6">Entrez un lien </label>
             <div class="d-flex">
               <input
                 class="form-control border border-dark"
@@ -44,8 +67,14 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-10 col-lg-6 mt-5 d-flex justify-content-center" id="qrcode"></div>
-            <div class="col-12 col-sm-10 col-md-10 col-lg-6 mt-5 align-self-center text-center" id="sectionDownload"></div>
+            <div
+              class="col-12 col-sm-10 col-md-10 col-lg-6 mt-5 d-flex justify-content-center"
+              id="qrcode"
+            ></div>
+            <div
+              class="col-12 col-sm-10 col-md-10 col-lg-6 mt-5 align-self-center text-center"
+              id="sectionDownload"
+            ></div>
           </div>
         </div>
       </div>

@@ -2,9 +2,9 @@ var inputUrl = document.getElementById("inputUrl");
 var buttonGenQR = document.getElementById("genQR");
 const sectionDownload = document.getElementById("sectionDownload");
 
-function generateQrCode() {
-  // Clear the contents of the #qrcode div
+// sms: 0750455364&body= test pour envoyer un sms
 
+function generateQrCode() {
   document.getElementById("qrcode").innerHTML = "";
 
   var qrcode = new QRCode(document.getElementById("qrcode"), {
@@ -14,12 +14,12 @@ function generateQrCode() {
     colorDark: "#000000",
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H,
-    border: 4
+    border: 2,
   });
 
   (async function () {
     await new Promise((resolve) => {
-      setTimeout(resolve, 500); // Adjust the delay as needed
+      setTimeout(resolve, 500); 
     });
 
     const qrcodeImg = document.querySelector("#qrcode img");
@@ -29,7 +29,6 @@ function generateQrCode() {
       qrcodeImgSrc +
       '" download="qrcode.png"><i class="fa-solid fa-download fa-beat"></i><br>Telecharger</a>';
   })();
-
 }
 
 inputUrl.addEventListener("keyup", function (e) {

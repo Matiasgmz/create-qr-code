@@ -23,8 +23,3 @@ body {
   margin-top: 18%!important;
   border-radius: 3rem;
 }
-
-#qrcode-container {
-  border: 10px solid white; /* Border around the QR code */
-  display: inline-block; /* Ensures the container's size adjusts to its content */
-}
