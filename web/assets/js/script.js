@@ -99,7 +99,7 @@ inputPhone.addEventListener("keyup", function (e) {
 
 inputSmsBody.addEventListener("keyup", function (e) {
   if (inputSmsBody.value.length > 0 && inputSms.value.length > 0) {
-    data = "sms: " + inputPhone.value + "&body=" + inputSmsBody.value;
+    data = "sms: " + inputSms.value + "&body=" + inputSmsBody.value;
     generateQrCode();
   } else {
     document.getElementById("qrcode").innerHTML = "";
