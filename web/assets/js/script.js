@@ -1,6 +1,9 @@
-var inputUrl = document.getElementById("inputUrl");
-var buttonGenQR = document.getElementById("genQR");
 const sectionDownload = document.getElementById("sectionDownload");
+
+var inputUrl = document.getElementById("inputUrl");
+var inputPhone = document.getElementById("inputPhone");
+var inputSms = document.getElementById("inputSms");
+var inputSmsBody = document.getElementById("inputSmsBody");
 
 // sms: 0750455364&body= test pour envoyer un sms
 const btnUrl = document.getElementById("btnUrl");
@@ -51,7 +54,7 @@ function generateQrCode() {
   document.getElementById("qrcode").innerHTML = "";
 
   var qrcode = new QRCode(document.getElementById("qrcode"), {
-    text: inputUrl.value,
+    text: data,
     width: 256,
     height: 256,
     colorDark: "#000000",
@@ -76,6 +79,27 @@ function generateQrCode() {
 
 inputUrl.addEventListener("keyup", function (e) {
   if (inputUrl.value.length > 0) {
+    data = inputUrl.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
+
+inputPhone.addEventListener("keyup", function (e) {
+  if (inputPhone.value.length > 0) {
+    data = "tel:" + inputPhone.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
+
+inputSmsBody.addEventListener("keyup", function (e) {
+  if (inputSmsBody.value.length > 0 && inputSms.value.length > 0) {
+    data = "sms: " + inputPhone.value + "&body=" + inputSmsBody.value;
     generateQrCode();
   } else {
     document.getElementById("qrcode").innerHTML = "";
