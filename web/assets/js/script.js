@@ -106,3 +106,7 @@ inputSmsBody.addEventListener("keyup", function (e) {
     sectionDownload.innerHTML = "";
   }
 });
+
+
+const pFooter = document.getElementById("pFooter");
+pFooter.innerHTML = new Date().getFullYear() + " - MATIAS GOMEZ";
