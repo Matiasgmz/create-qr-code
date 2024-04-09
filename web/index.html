@@ -54,18 +54,72 @@
         >
           <h1 class="mt-3 fs-4 text-center">Generateur QR Code</h1>
 
-          <div class="mt-5">
+          <nav class="nav nav-pills flex-column flex-sm-row mt-4 mx-auto">
+            <button
+              id="btnUrl"
+              class="flex-sm-fill text-sm-center nav-link active"
+            >
+              Url
+            </button>
+            <button id="btnPhone" class="flex-sm-fill text-sm-center nav-link">
+              Numero
+            </button>
+            <button id="btnSms" class="flex-sm-fill text-sm-center nav-link">
+              Message
+            </button>
+          </nav>
+
+          <div id="sectionUrl" class="mt-5">
             <label for="url" class="form-label fs-6">Entrez un lien </label>
-            <div class="d-flex">
-              <input
-                class="form-control border border-dark"
-                type="text"
-                name="inputUrl"
-                id="inputUrl"
-                placeholder="https://example.com"
-              />
-            </div>
+
+            <input
+              class="form-control border border-dark"
+              type="text"
+              name="inputUrl"
+              id="inputUrl"
+              placeholder="https://example.com"
+            />
           </div>
+
+          <div id="sectionPhone" class="mt-5 d-none">
+            <label for="inputPhone" class="form-label fs-6"
+              >Entrez un numero
+            </label>
+
+            <input
+              class="form-control border border-dark"
+              type="tel"
+              name="inputPhone"
+              id="inputPhone"
+              placeholder="0123456789"
+            />
+          </div>
+
+          <div id="sectionSms" class="mt-5 d-none">
+            <label for="inputSms" class="form-label fs-6"
+              >Entrez un numero</label
+            >
+
+            <input
+              class="form-control border border-dark"
+              type="text"
+              name="inputSms"
+              id="inputSms"
+              placeholder="0123456789"
+            />
+
+            <label for="contentSms" class="form-label fs-6 mt-3"
+              >Entrez un messsage</label
+            >
+            <textarea
+              class="form-control border border-dark"
+              name="contentSms"
+              id="contentSms"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
           <div class="row justify-content-center">
             <div
               class="col-12 col-sm-10 col-md-10 col-lg-6 mt-5 d-flex justify-content-center"
