@@ -1,10 +1,10 @@
 particlesJS("particles-js", {
     particles: {
       number: {
-        value: 100, // Nombre de particules
+        value: 60, // Nombre de particules
         density: {
           enable: true,
-          value_area: 800, // Densité des particules sur l'écran
+          value_area: 1000, // Densité des particules sur l'écran
         },
       },
       color: {

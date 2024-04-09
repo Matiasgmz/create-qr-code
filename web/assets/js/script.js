@@ -24,7 +24,7 @@ function generateQrCode() {
     const qrcodeImg = document.querySelector("#qrcode img");
     const qrcodeImgSrc = qrcodeImg.src;
     sectionDownload.innerHTML =
-      '<a class="text-decoration-none text-dark fs-3" href="' +
+      '<a class="text-decoration-none text-dark fs-4" href="' +
       qrcodeImgSrc +
       '" download="qrcode.png"><i class="fa-solid fa-download fa-beat"></i><br>Telecharger</a>';
   })();
@@ -33,5 +33,3 @@ function generateQrCode() {
 inputUrl.addEventListener("keyup", function (e) {
   generateQrCode();
 });
-
-
