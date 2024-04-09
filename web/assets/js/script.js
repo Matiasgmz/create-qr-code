@@ -1,14 +1,60 @@
-var inputUrl = document.getElementById("inputUrl");
-var buttonGenQR = document.getElementById("genQR");
 const sectionDownload = document.getElementById("sectionDownload");
 
+var inputUrl = document.getElementById("inputUrl");
+var inputPhone = document.getElementById("inputPhone");
+var inputSms = document.getElementById("inputSms");
+var inputSmsBody = document.getElementById("inputSmsBody");
+
 // sms: 0750455364&body= test pour envoyer un sms
+const btnUrl = document.getElementById("btnUrl");
+const btnPhone = document.getElementById("btnPhone");
+const btnSms = document.getElementById("btnSms");
+
+const sectionUrl = document.getElementById("sectionUrl");
+const sectionPhone = document.getElementById("sectionPhone");
+const sectionSms = document.getElementById("sectionSms");
+
+btnUrl.addEventListener("click", function () {
+  btnUrl.classList.add("active");
+  btnPhone.classList.remove("active");
+  btnSms.classList.remove("active");
+
+  sectionUrl.classList.remove("d-none");
+  sectionUrl.classList.add("d-block");
+
+  sectionPhone.classList.add("d-none");
+  sectionSms.classList.add("d-none");
+});
+
+btnPhone.addEventListener("click", function () {
+  btnPhone.classList.add("active");
+  btnUrl.classList.remove("active");
+  btnSms.classList.remove("active");
+
+  sectionPhone.classList.remove("d-none");
+  sectionUrl.classList.add("d-block");
+
+  sectionSms.classList.add("d-none");
+  sectionUrl.classList.add("d-none");
+});
+
+btnSms.addEventListener("click", function () {
+  btnSms.classList.add("active");
+  btnUrl.classList.remove("active");
+  btnPhone.classList.remove("active");
+
+  sectionSms.classList.remove("d-none");
+  sectionSms.classList.add("d-block");
+
+  sectionPhone.classList.add("d-none");
+  sectionUrl.classList.add("d-none");
+});
 
 function generateQrCode() {
   document.getElementById("qrcode").innerHTML = "";
 
   var qrcode = new QRCode(document.getElementById("qrcode"), {
-    text: inputUrl.value,
+    text: data,
     width: 256,
     height: 256,
     colorDark: "#000000",
@@ -19,7 +65,7 @@ function generateQrCode() {
 
   (async function () {
     await new Promise((resolve) => {
-      setTimeout(resolve, 500); 
+      setTimeout(resolve, 500);
     });
 
     const qrcodeImg = document.querySelector("#qrcode img");
@@ -33,6 +79,27 @@ function generateQrCode() {
 
 inputUrl.addEventListener("keyup", function (e) {
   if (inputUrl.value.length > 0) {
+    data = inputUrl.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
+
+inputPhone.addEventListener("keyup", function (e) {
+  if (inputPhone.value.length > 0) {
+    data = "tel:" + inputPhone.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
+
+inputSmsBody.addEventListener("keyup", function (e) {
+  if (inputSmsBody.value.length > 0 && inputSms.value.length > 0) {
+    data = "sms: " + inputSms.value + "&body=" + inputSmsBody.value;
     generateQrCode();
   } else {
     document.getElementById("qrcode").innerHTML = "";
