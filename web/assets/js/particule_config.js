@@ -54,7 +54,7 @@ particlesJS("particles-js", {
       },
       move: {
         enable: true,
-        speed: 6, // Vitesse de déplacement des particules
+        speed: 2, // Vitesse de déplacement des particules
         direction: "right", // Direction du mouvement (none, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left)
         random: false,
         straight: false,
