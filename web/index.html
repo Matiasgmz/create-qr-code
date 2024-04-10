@@ -50,7 +50,7 @@
       <div class="row justify-content-center">
         <div
           id="sectionInput"
-          class="col-10 col-sm-10 col-md-8 col-xl-6 px-4 py-5 my-5 shadow"
+          class="col-11 col-sm-10 col-md-8 col-xl-6 px-4 py-5 my-5 shadow"
         >
           <h1 class="mt-3 fs-4 text-center">Generateur QR Code</h1>
 
@@ -66,6 +66,9 @@
             </button>
             <button id="btnSms" class="flex-sm-fill text-sm-center nav-link">
               Message
+            </button>
+            <button id="btnEmail" class="flex-sm-fill text-sm-center nav-link">
+              e-mail
             </button>
           </nav>
 
@@ -120,6 +123,43 @@
             ></textarea>
           </div>
 
+          <div id="sectionEmail" class="mt-5 d-none">
+            <label for="inputEmail" class="form-label fs-6"
+              >Entrez un e-mail</label
+            >
+
+            <input
+              class="form-control border border-dark"
+              type="mail"
+              name="inputEmail"
+              id="inputEmail"
+              placeholder="exemple@exe.com"
+            />
+
+            <label for="inputEmailSubject" class="form-label fs-6 mt-3"
+              >Entrez un objet</label
+            >
+
+            <input
+              class="form-control border border-dark"
+              type="text"
+              name="inputEmailSubject"
+              id="inputEmailSubject"
+              placeholder="exemple@exe.com"
+            />
+
+            <label for="inputEmailBody" class="form-label fs-6 mt-3"
+              >Entrez un messsage</label
+            >
+            <textarea
+              class="form-control border border-dark"
+              name="inputEmailBody"
+              id="inputEmailBody"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
           <div class="row justify-content-center">
             <div
               class="col-12 col-sm-10 col-md-10 col-lg-6 mt-5 d-flex justify-content-center"
@@ -139,9 +179,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-center">
-          <p class="fs-6" id="pFooter">
-          2024 - Matias GOMEZ 
-          </p>
+          <p class="fs-6" id="pFooter">2024 - Matias GOMEZ</p>
         </div>
       </div>
     </div>
