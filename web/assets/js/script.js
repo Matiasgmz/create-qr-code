@@ -142,6 +142,53 @@ inputSms.addEventListener("keyup", function (e) {
   }
 });
 
+inputEmail.addEventListener("keyup", function (e) {
+  if (inputEmail.value.length > 0) {
+    data =
+      "mailto:" +
+      inputEmail.value +
+      "?subject=" +
+      inputEmailSubject.value +
+      "&body=" +
+      inputEmailBody.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
+
+inputEmailSubject.addEventListener("keyup", function (e) {
+  if (inputEmail.value.length > 0 && inputEmailSubject.value.length > 0) {
+    data =
+      "mailto:" +
+      inputEmail.value +
+      "?subject=" +
+      inputEmailSubject.value +
+      "&body=" +
+      inputEmailBody.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
+
+inputEmailBody.addEventListener("keyup", function (e) {
+  if (inputEmail.value.length > 0 && inputEmailBody.value.length > 0) {
+    data =
+      "mailto:" +
+      inputEmail.value +
+      "?subject=" +
+      inputEmailSubject.value +
+      "&body=" +
+      inputEmailBody.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
 
 const pFooter = document.getElementById("pFooter");
 pFooter.innerHTML = new Date().getFullYear() + " - MATIAS GOMEZ";
