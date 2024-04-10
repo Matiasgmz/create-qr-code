@@ -73,7 +73,7 @@ function generateQrCode() {
     sectionDownload.innerHTML =
       '<a class="text-decoration-none text-light fs-5 btn btn-dark " href="' +
       qrcodeImgSrc +
-      '" download="qrcode.png"><i class="fa-solid fa-download fa-beat"></i><br>Telecharger</a>';
+      '" download="qrcode.png"><i class="fa-solid fa-download"></i><br>Telecharger</a>';
   })();
 }
 
@@ -98,6 +98,16 @@ inputPhone.addEventListener("keyup", function (e) {
 });
 
 inputSmsBody.addEventListener("keyup", function (e) {
+  if (inputSmsBody.value.length > 0 && inputSms.value.length > 0) {
+    data = "sms: " + inputSms.value + "&body=" + inputSmsBody.value;
+    generateQrCode();
+  } else {
+    document.getElementById("qrcode").innerHTML = "";
+    sectionDownload.innerHTML = "";
+  }
+});
+
+inputSms.addEventListener("keyup", function (e) {
   if (inputSmsBody.value.length > 0 && inputSms.value.length > 0) {
     data = "sms: " + inputSms.value + "&body=" + inputSmsBody.value;
     generateQrCode();
