@@ -191,4 +191,4 @@ inputEmailBody.addEventListener("keyup", function (e) {
 });
 
 const pFooter = document.getElementById("pFooter");
-pFooter.innerHTML = new Date().getFullYear() + " - MATIAS GOMEZ";
+pFooter.innerHTML = new Date().getFullYear() + " | MATIAS GOMEZ";

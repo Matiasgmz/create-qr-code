@@ -8,13 +8,13 @@
 }
 
 @font-face {
-  font-family: "Generic Techno";
-  src: url("../font/GenericTechno.otf");
+  font-family: "Airstrike";
+  src: url("../font/airstrike.ttf");
 }
 
 body {
   background-color: #f1f3f4;
-  font-family: "Generic Techno";
+  font-family: "Airstrike";
 }
 
 #sectionInput {
