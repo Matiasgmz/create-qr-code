@@ -7,6 +7,8 @@ var inputSmsBody = document.getElementById("inputSmsBody");
 var inputEmail = document.getElementById("inputEmail");
 var inputEmailSubject = document.getElementById("inputEmailSubject");
 var inputEmailBody = document.getElementById("inputEmailBody");
+var inputColor = document.getElementById("inputColor");
+
 
 // sms: 0750455364&body= test pour envoyer un sms
 const btnUrl = document.getElementById("btnUrl");
@@ -82,7 +84,7 @@ function generateQrCode() {
     text: data,
     width: 256,
     height: 256,
-    colorDark: "#000000",
+    colorDark: inputColor.value,
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H,
     border: 2,
@@ -101,6 +103,10 @@ function generateQrCode() {
       '" download="qrcode.png"><i class="fa-solid fa-download"></i><br>Telecharger</a>';
   })();
 }
+
+inputColor.addEventListener("input", function (e) {
+  generateQrCode();
+});
 
 inputUrl.addEventListener("keyup", function (e) {
   if (inputUrl.value.length > 0) {
