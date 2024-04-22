@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://generate-qrcode-weld.vercel.app/sitemap.xml
