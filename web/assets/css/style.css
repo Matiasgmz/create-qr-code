@@ -29,7 +29,7 @@ button.active {
 }
 
 #inputSwitchBorder:checked {
-  background-color: rgba(95, 116, 112, 0.9)!important;
+  background-color: rgba(95, 116, 112, 0.9) !important;
   border-color: transparent;
   box-shadow: none;
 }
@@ -44,4 +44,14 @@ button.active {
   margin-top: 10% !important;
   border-radius: 3rem;
   backdrop-filter: blur(3px);
+}
+
+#description {
+  background-color: rgba(136, 150, 150, 0.6);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+#pFooter:hover {
+  color: rgb(95, 116, 112) !important;
 }
