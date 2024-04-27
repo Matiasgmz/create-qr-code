@@ -1,13 +1,15 @@
 const sectionDownload = document.getElementById("sectionDownload");
 
-var inputUrl = document.getElementById("inputUrl");
-var inputPhone = document.getElementById("inputPhone");
-var inputSms = document.getElementById("inputSms");
-var inputSmsBody = document.getElementById("inputSmsBody");
-var inputEmail = document.getElementById("inputEmail");
-var inputEmailSubject = document.getElementById("inputEmailSubject");
-var inputEmailBody = document.getElementById("inputEmailBody");
-var inputColor = document.getElementById("inputColor");
+const inputUrl = document.getElementById("inputUrl");
+const inputPhone = document.getElementById("inputPhone");
+const inputSms = document.getElementById("inputSms");
+const inputSmsBody = document.getElementById("inputSmsBody");
+const inputEmail = document.getElementById("inputEmail");
+const inputEmailSubject = document.getElementById("inputEmailSubject");
+const inputEmailBody = document.getElementById("inputEmailBody");
+const inputColor = document.getElementById("inputColor");
+const inputSwitchBorder = document.getElementById("inputSwitchBorder");
+var valueSwitchBorder = 2;
 
 // sms: 0750455364&body= test pour envoyer un sms
 const btnUrl = document.getElementById("btnUrl");
@@ -86,7 +88,7 @@ function generateQrCode() {
     colorDark: inputColor.value,
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H,
-    border: 2,
+    border: valueSwitchBorder,
   });
 
   (async function () {
@@ -193,6 +195,18 @@ inputEmailBody.addEventListener("keyup", function (e) {
     document.getElementById("qrcode").innerHTML = "";
     sectionDownload.innerHTML = "";
   }
+});
+
+inputSwitchBorder.addEventListener("change", function (e) {
+  if(inputSwitchBorder.checked){
+    valueSwitchBorder = 2;
+    generateQrCode();
+  }
+  else{
+    valueSwitchBorder = 0;
+    generateQrCode();
+  }
+
 });
 
 const pFooter = document.getElementById("pFooter");

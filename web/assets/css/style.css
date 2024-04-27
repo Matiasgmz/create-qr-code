@@ -18,24 +18,29 @@ body {
 }
 
 h1 {
-  text-shadow: white 1px 0 2px;
   font-size: 2.2rem;
 }
 
 button {
   color: white !important;
-  text-shadow: white 1px 0 1px;
 }
 button.active {
   background-color: rgba(95, 116, 112, 0.9) !important;
 }
 
+#inputSwitchBorder:checked {
+  background-color: rgba(95, 116, 112, 0.9)!important;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#inputSwitchBorder {
+  box-shadow: none;
+}
+
 #sectionInput {
   z-index: 1;
-  /* background-color: rgba(255, 255, 255, 0.95); */
-  /* background-image: linear-gradient(45deg, rgba(224,226,219,0.9) 0%, rgba(224,226,219,0.9) 21%,rgba(224,226,219,0.9) 21%, rgba(224,226,219,0.9) 37%,rgba(184,189,181,0.9) 37%, rgba(184,189,181,0.9) 46%,rgba(184,189,181,0.9) 46%, rgba(184,189,181,0.9) 53%,rgba(184,189,181,0.9) 53%, rgba(184,189,181,0.9) 59%,rgba(136,150,150,0.9) 59%, rgba(136,150,150,0.9) 77%,rgba(95,116,112,0.9) 77%, rgba(95,116,112,0.9) 100%); */
   background-color: rgba(136, 150, 150, 0.6);
-  /* background-image: linear-gradient(45deg, rgb(224,226,219) 0%, rgb(224,226,219) 21%,rgb(224,226,219) 21%, rgb(224,226,219) 37%,rgb(184,189,181) 37%, rgb(184,189,181) 46%,rgb(184,189,181) 46%, rgb(184,189,181) 53%,rgb(184,189,181) 53%, rgb(184,189,181) 59%,rgb(136,150,150) 59%, rgb(136,150,150) 77%,rgb(95,116,112) 77%, rgb(95,116,112) 100%); */
   margin-top: 10% !important;
   border-radius: 3rem;
   backdrop-filter: blur(3px);
