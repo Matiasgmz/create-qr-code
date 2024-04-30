@@ -22,10 +22,11 @@ h1 {
 }
 
 button {
-  color: white !important;
+  color: black !important;
 }
 button.active {
-  background-color: rgba(95, 116, 112, 0.9) !important;
+  background-color: #0071e3 !important;
+  color: white !important;
 }
 
 #inputSwitchBorder:checked {
@@ -40,16 +41,22 @@ button.active {
 
 #sectionInput {
   z-index: 1;
-  background-color: rgba(136, 150, 150, 0.6);
+  background-color: rgba(232,232, 237,0.7);
   margin-top: 10% !important;
   border-radius: 3rem;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(7px);
+}
+
+label {
+color: black !important;
 }
 
 #description {
-  background-color: rgba(136, 150, 150, 0.6);
+  background-color: rgba(255,255, 255,0.5);
+  backdrop-filter: blur(7px);
   padding: 1rem;
   border-radius: 1rem;
+  color: black;
 }
 
 #pFooter:hover {
